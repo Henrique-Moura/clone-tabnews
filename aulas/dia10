@@ -6,3 +6,14 @@
 10.2
 
 - Mostra como sincronizar configurações do github;
+
+10.3
+
+- Aprensenta o forma de padronizar as configurações de código através do editor config.
+    - Editor config
+        - root = true, significa que o editorconfig não precisa mas buscar por arquivos de configuração, pois com ele podemos optar por escolher padrões de codigo para cada diretoria, fazendo cada pasta ter uma configuração, portanto sem o root = true, ele irá ficar buscando pelo arquivo em todas outras subpastas.
+        - [*], diz respeito a quais arquivos as regras serão aplicadas, que no caso, não todos.  
+        - indent_style = space, diz que o a identação padrão se dá através do tamanho de espaço.
+        - indent_size = 2, diz o tamanho da identação.
+    - Por padrao o vscode não respeita essas configurações, sendo necessário a instalação da extensão EditorConfig for VS code. 
+    
