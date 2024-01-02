@@ -1,0 +1,31 @@
+10.1
+
+- O conteúdo desta aula fala sobre um estudo de caso real vivido pelo Filipe no pagar.me. Ele conta que a base de codigo inicial do pagar.me não havia uma Estilização de código, o que fez que o código feito por cada pessoa tivesse sua particularidade, fazendo o todo ficar despadronizado, a solução encontrada foi utilizar um padronizador de código que no caso foi o JavaScript Standard Style (https://standardjs.com/). O problema é que a base de código já era grande e quando utilizado, a modificação foi feita em tantas linhas que a PR ficou impossível de ser revisada, por fim ele conta que não deu nenhum problema na aplicação e a padronização foi realizada. No entanto a lição que fica é que não devemos esperar que a base de código cresça, para termos uma regra para como deve ser codificada, pois o trabalho e a chances de termos prblemas será gigantesca.
+
+
+10.2
+
+- Mostra como sincronizar configurações do github;
+
+10.3
+
+- Aprensenta o forma de padronizar as configurações de código através do editor config.
+    - Editor config
+        - root = true, significa que o editorconfig não precisa mas buscar por arquivos de configuração, pois com ele podemos optar por escolher padrões de codigo para cada diretoria, fazendo cada pasta ter uma configuração, portanto sem o root = true, ele irá ficar buscando pelo arquivo em todas outras subpastas.
+        - [*], diz respeito a quais arquivos as regras serão aplicadas, que no caso, não todos.  
+        - indent_style = space, diz que o a identação padrão se dá através do tamanho de espaço.
+        - indent_size = 2, diz o tamanho da identação.
+    - Por padrao o vscode não respeita essas configurações, sendo necessário a instalação da extensão EditorConfig for VS code. 
+    
+10.4
+
+- Por padrão o editorconfig, não conserta os arquivos já modificados antes de sua implementação, apenas padroniza para os próximos. A alternativa para isso é utilizar o prettier, que tem sua extensão, mas como forma de fazer que isso seja padrão para o projeto, a melhor alternaliza é criando uma dependência do prettier no projeto e instala-lo como devDependencies. 
+  - "lint:check": "prettier --check ." Um script para checar os locais que tem erro, mas não faz alteração
+    Exemplo de retorno > 
+      prettier --check .
+      Checking formatting...
+      [warn] pages/index.js
+      [warn] README.md
+      [warn] Code style issues found in 2 files. Run Prettier to fix.
+  - "lint:fix": "prettier --write .": Este de fato corrige os erros. 
+- Por fim, colocamos o formatador do prettier como padrão no vscode. Settings > Editor: Default Formatter > Prettier
