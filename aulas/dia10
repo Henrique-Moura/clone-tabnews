@@ -17,3 +17,15 @@
         - indent_size = 2, diz o tamanho da identação.
     - Por padrao o vscode não respeita essas configurações, sendo necessário a instalação da extensão EditorConfig for VS code. 
     
+10.4
+
+- Por padrão o editorconfig, não conserta os arquivos já modificados antes de sua implementação, apenas padroniza para os próximos. A alternativa para isso é utilizar o prettier, que tem sua extensão, mas como forma de fazer que isso seja padrão para o projeto, a melhor alternaliza é criando uma dependência do prettier no projeto e instala-lo como devDependencies. 
+  - "lint:check": "prettier --check ." Um script para checar os locais que tem erro, mas não faz alteração
+    Exemplo de retorno > 
+      prettier --check .
+      Checking formatting...
+      [warn] pages/index.js
+      [warn] README.md
+      [warn] Code style issues found in 2 files. Run Prettier to fix.
+  - "lint:fix": "prettier --write .": Este de fato corrige os erros. 
+- Por fim, colocamos o formatador do prettier como padrão no vscode. Settings > Editor: Default Formatter > Prettier
