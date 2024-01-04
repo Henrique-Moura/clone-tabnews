@@ -1,0 +1,12 @@
+11.1 - Resolução de DNS (Desafio Nível 1)
+
+- Teve explicação sobre o que é o DNS (domain name system). Que basicamente é o nome que damos a um site para não termos que ficar digitando seu IP para acessa-lo. Após isso há um easter egg com uma aula extra. 
+
+11.2 - Resolução de DNS (Desafio Nível 2)
+
+- Há um explicação mais ampla do DNS. É apresentado o 
+    - A sequência de uma requisição: Computador > Provedor de Internet (Através do Recursive Resolver) > Root Server >  Recursive Resolver > TLD > Recursive Resolver > Authoritative Server > Recursive Resolver > Computador > Servidor do Site
+    - FQDN (Fully Qualified Domain Name)
+    - TLD (Top-Level Domian) que seria basicamento o primeiro level de uma url, por exemplo: https://www.tabnews.com.br/ seria o .br
+    - TTL (Time to Live) é o cache que é mantido em cada etapa, para que essas requisiçoes não sejam feitas sempre.
+- Há mais um easter egg kkkkk
